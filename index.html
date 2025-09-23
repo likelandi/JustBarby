@@ -3,15 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Just Barby — Página personal</title>
-  <meta name="description" content="Just Barby — Página personal femenina en tonos rosados, beige y blancos. Conóceme y contáctame. No ofrezco servicios sexuales.">
+  <title>Just Barby — Conocer hombres respetuosos en Buenos Aires</title>
+  <meta name="description" content="Just Barby — Página personal femenina (no ofrezco servicios sexuales). Busco conocer hombres respetuosos en Buenos Aires. WhatsApp y email de contacto.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%23fda4af'/%3E%3C/svg%3E">
-  <!-- Tailwind CDN -->
+  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{beige:{50:'#faf7f2',100:'#f4efe6',200:'#e9decc'}}}}};</script>
-  <!-- Lucide icons -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { beige: { 50: '#faf7f2', 100: '#f4efe6', 200: '#e9decc' } }
+        }
+      }
+    }
+  </script>
+  <!-- Lucide -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>.gradient-bg{background-image:linear-gradient(to bottom,#fff1f2,#ffffff,#faf7f2);}.card{backdrop-filter:blur(8px);}</style>
+  <style>
+    .gradient-bg { background-image: linear-gradient(to bottom, #fff1f2, #ffffff, #faf7f2); }
+    .card { backdrop-filter: blur(8px); }
+  </style>
 </head>
 <body class="min-h-screen gradient-bg text-rose-900 selection:bg-rose-200/80">
   <!-- NAV -->
@@ -23,11 +34,11 @@
         </div>
         <span class="font-black tracking-tight text-lg text-rose-700">Just Barby</span>
       </a>
-      <div class="hidden md:flex items-center gap-3 text-sm">
-        <a href="#about" class="hover:text-rose-500 px-2 py-1">Sobre</a>
-        <a href="#about" class="hover:text-rose-500 px-2 py-1">Colaboraciones</a>
-        <a href="#gallery" class="hover:text-rose-500 px-2 py-1">Galería</a>
-        <a href="#contact" class="hover:text-rose-500 px-2 py-1">Contacto</a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-rose-500">Sobre</a>
+        <a href="#connection" class="hover:text-rose-500">Conexión</a>
+        <a href="#gallery" class="hover:text-rose-500">Galería</a>
+        <a href="#contact" class="hover:text-rose-500">Contacto</a>
         <a href="#booking" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-2xl bg-rose-400 hover:bg-rose-500 text-white shadow">Contacto</a>
       </div>
     </nav>
@@ -45,20 +56,38 @@
           Bienvenida a <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-300 to-pink-400">Just Barby</span>
         </h1>
         <p class="text-base md:text-lg text-rose-700/80 max-w-prose">
-          Espacio personal y femenino en tonos suaves. Un lugar para conocerme y estar en contacto.
-          <span class="block text-xs text-rose-600/80 mt-2">Página personal — no ofrezco servicios sexuales.</span>
+          Busco conocer <strong>hombres respetuosos</strong> para charlar y compartir momentos.
+          Estilo femenino, colores suaves y buena onda.
+          <span class="block text-xs text-rose-600/80 mt-2">Página personal — <strong>no ofrezco servicios sexuales</strong>.</span>
         </p>
-        <div class="flex flex-wrap gap-3">
+
+        <!-- Chips: Lo que busco / No busco -->
+        <div class="flex flex-wrap gap-2 text-xs text-rose-700/90 mt-2">
+          <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Charlas auténticas</span>
+          <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Citas tranquilas</span>
+          <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Respeto</span>
+          <span class="px-3 py-1 rounded-full bg-beige-50 border border-rose-100">Buenos Aires</span>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs text-rose-500/80">
+          <span class="px-3 py-1 rounded-full bg-white border border-rose-100">No sexo por pago</span>
+          <span class="px-3 py-1 rounded-full bg-white border border-rose-100">Sin contenido explícito</span>
+          <span class="px-3 py-1 rounded-full bg-white border border-rose-100">Sin urgencias</span>
+        </div>
+
+        <div class="flex flex-wrap gap-3 pt-2">
           <a class="rounded-2xl bg-rose-400 hover:bg-rose-500 text-white px-4 py-2 inline-flex items-center shadow" href="#booking">
             <i data-lucide="heart" class="w-4 h-4 mr-2"></i>Contactar
           </a>
           <a class="rounded-2xl border border-rose-300 text-rose-700 hover:bg-rose-50 px-4 py-2 inline-flex items-center" href="#gallery">
             <i data-lucide="play-circle" class="w-4 h-4 mr-2"></i>Ver Galería
           </a>
-          <a class="rounded-2xl bg-green-500 hover:bg-green-600 text-white px-4 py-2 inline-flex items-center shadow" href="https://wa.me/5491124745039?text=Hola%20Just%20Barby%2C%20te%20escribo%20desde%20tu%20sitio%20web%20%3A%29" target="_blank" rel="noopener">
+          <a class="rounded-2xl bg-green-500 hover:bg-green-600 text-white px-4 py-2 inline-flex items-center shadow"
+             href="https://wa.me/5491124745039?text=Hola%20Just%20Barby%2C%20te%20escribo%20desde%20tu%20sitio%20web%20%3A)"
+             target="_blank" rel="noopener">
             <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp
           </a>
         </div>
+
         <div class="flex items-center gap-4 text-sm text-rose-600/80">
           <a href="https://instagram.com/justbarby" target="_blank" class="inline-flex items-center gap-2 hover:text-rose-500">
             <i data-lucide="instagram" class="w-4 h-4"></i> @justbarby
@@ -67,6 +96,8 @@
           <span>Buenos Aires, Argentina</span>
         </div>
       </div>
+
+      <!-- Hero image (auto si existe cover.jpg) -->
       <div class="relative">
         <div class="aspect-[4/5] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-rose-200">
           <div class="relative h-full w-full bg-gradient-to-br from-rose-100 via-white to-pink-100 grid place-items-center">
@@ -104,100 +135,13 @@
         </div>
         <div class="rounded-2xl border border-rose-100 bg-white/70 card p-6">
           <h3 class="font-bold text-lg text-rose-700">Conexión auténtica</h3>
-          <p class="text-sm text-rose-600/80">Este sitio es mi presentación personal para conectar.</p>
+          <p class="text-sm text-rose-600/80">Me encanta la conversación amable y los planes tranquilos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="py-16 md:py-24 bg-rose-50/60">
+  <!-- CONNECTION -->
+  <section id="connection" class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 md:px-6">
-      <div class="max-w-3xl mx-auto text-center space-y-3">
-        <p class="uppercase tracking-widest text-xs md:text-sm text-rose-400/80">galería</p>
-        <h2 class="text-3xl md:text-5xl font-extrabold leading-tight text-rose-900">Mis fotos</h2>
-        <p class="text-rose-700/80 text-base md:text-lg">Imágenes en lencería delicada, tonos rosados, beige y blancos.</p>
-      </div>
-      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="aspect-square md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden ring-1 ring-rose-100">
-          <div class="h-full w-full bg-gradient-to-br from-rose-100 to-beige-100 grid place-items-center">
-            <span class="text-xs text-rose-500">Foto 1</span>
-          </div>
-        </div>
-        <div class="aspect-square rounded-2xl overflow-hidden ring-1 ring-rose-100">
-          <div class="h-full w-full bg-gradient-to-br from-rose-100 to-beige-100 grid place-items-center">
-            <span class="text-xs text-rose-500">Foto 2</span>
-          </div>
-        </div>
-        <div class="aspect-square rounded-2xl overflow-hidden ring-1 ring-rose-100">
-          <div class="h-full w-full bg-gradient-to-br from-rose-100 to-beige-100 grid place-items-center">
-            <span class="text-xs text-rose-500">Foto 3</span>
-          </div>
-        </div>
-        <div class="aspect-square rounded-2xl overflow-hidden ring-1 ring-rose-100">
-          <div class="h-full w-full bg-gradient-to-br from-rose-100 to-beige-100 grid place-items-center">
-            <span class="text-xs text-rose-500">Foto 4</span>
-          </div>
-        </div>
-        <div class="aspect-square rounded-2xl overflow-hidden ring-1 ring-rose-100">
-          <div class="h-full w-full bg-gradient-to-br from-rose-100 to-beige-100 grid place-items-center">
-            <span class="text-xs text-rose-500">Foto 5</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="booking" class="py-16 md:py-24">
-    <div class="max-w-5xl mx-auto px-4 md:px-6">
-      <div class="max-w-3xl mx-auto text-center space-y-3">
-        <p class="uppercase tracking-widest text-xs md:text-sm text-rose-400/80">contacto</p>
-        <h2 class="text-3xl md:text-5xl font-extrabold leading-tight text-rose-900">¿Querés conocerme más?</h2>
-        <p class="text-rose-700/80 text-base md:text-lg">Escribime y charlamos. Esto es solo mi página personal. <span class="text-rose-600/80">No ofrezco servicios sexuales.</span></p>
-      </div>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-rose-100 bg-white/70 card p-6">
-          <h4 class="font-semibold text-rose-700">Contacto directo</h4>
-          <a class="flex items-center gap-2 text-sm hover:text-rose-500" href="tel:+5491124745039">
-            <i data-lucide="phone" class="w-4 h-4"></i> +54 9 11 2474‑5039
-          </a>
-          <a class="flex items-center gap-2 text-sm hover:text-rose-500" href="mailto:Justbarby@proton.me">
-            <i data-lucide="mail" class="w-4 h-4"></i> Justbarby@proton.me
-          </a>
-          <a class="flex items-center gap-2 text-sm hover:text-rose-50 text-white bg-green-500 px-3 py-2 rounded-xl inline-flex" href="https://wa.me/5491124745039?text=Hola%20Just%20Barby%2C%20te%20escribo%20desde%20tu%20sitio%20web%20%3A%29" target="_blank" rel="noopener">
-            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
-          </a>
-          <p class="flex items-center gap-2 text-sm text-rose-600/80">
-            <i data-lucide="map-pin" class="w-4 h-4"></i> Buenos Aires, AR
-          </p>
-        </div>
-        <div class="rounded-2xl md:col-span-2 border border-rose-100 bg-white/70 card p-6">
-          <form action="mailto:Justbarby@proton.me" method="GET" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input name="subject" class="border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="Asunto" />
-            <input name="cc" class="border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="Tu email (opcional)" />
-            <textarea name="body" class="border rounded-xl p-3 h-32 md:col-span-2 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="Mensaje"></textarea>
-            <div class="md:col-span-2">
-              <button class="w-full rounded-2xl bg-rose-400 hover:bg-rose-500 text-white px-4 py-2">Enviar mensaje</button>
-            </div>
-          </form>
-          <p class="text-xs text-rose-500/80 mt-3">También podés escribirme por Instagram o WhatsApp.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="contact" class="py-10 bg-rose-50">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-rose-600/80">© <span id="year"></span> Just Barby · Página personal</p>
-      <div class="flex items-center gap-4 text-sm">
-        <a href="#" class="hover:text-rose-500">Política de privacidad</a>
-        <a href="#" class="hover:text-rose-500">Términos</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>document.getElementById('year').textContent=new Date().getFullYear();lucide.createIcons();</script>
-</body>
-</html>
+      <div class="max-w-3xl mx-auto t
