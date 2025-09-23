@@ -4,44 +4,31 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Just Barby — Página personal</title>
-  <meta name="description" content="Just Barby — Página personal femenina en tonos rosados, beige y blanco. Conóceme y contáctame. No es para prostitución.">
+  <meta name="description" content="Just Barby — Página personal femenina en tonos rosados, beige y blancos. Conóceme y contáctame. No ofrezco servicios sexuales.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%23fda4af'/%3E%3C/svg%3E">
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            beige: { 50: '#faf7f2', 100: '#f4efe6', 200: '#e9decc' }
-          }
-        }
-      }
-    }
-  </script>
+  <script>tailwind.config={theme:{extend:{colors:{beige:{50:'#faf7f2',100:'#f4efe6',200:'#e9decc'}}}}};</script>
   <!-- Lucide icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    .gradient-bg { background-image: linear-gradient(to bottom, #fff1f2, #ffffff, #faf7f2); }
-    .card { backdrop-filter: blur(8px); }
-  </style>
+  <style>.gradient-bg{background-image:linear-gradient(to bottom,#fff1f2,#ffffff,#faf7f2);}.card{backdrop-filter:blur(8px);}</style>
 </head>
 <body class="min-h-screen gradient-bg text-rose-900 selection:bg-rose-200/80">
   <!-- NAV -->
   <header class="sticky top-0 z-40 bg-white/70 border-b border-rose-100 backdrop-blur">
     <nav class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-      <a href="#home" className="flex items-center gap-2">
+      <a href="#home" class="flex items-center gap-2">
         <div class="h-8 w-8 rounded-2xl bg-gradient-to-br from-rose-300 to-pink-400 grid place-items-center shadow-md">
           <i data-lucide="sparkles" class="w-4 h-4 text-white"></i>
         </div>
         <span class="font-black tracking-tight text-lg text-rose-700">Just Barby</span>
       </a>
-      <div class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#about" class="hover:text-rose-500">Sobre</a>
-        <a href="#services" class="hover:text-rose-500">Colaboraciones</a>
-        <a href="#gallery" class="hover:text-rose-500">Galería</a>
-        <a href="#contact" class="hover:text-rose-500">Contacto</a>
-        <a href="#booking" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-2xl bg-rose-400 hover:bg-rose-500 text-white shadow">Reservar</a>
+      <div class="hidden md:flex items-center gap-3 text-sm">
+        <a href="#about" class="hover:text-rose-500 px-2 py-1">Sobre</a>
+        <a href="#about" class="hover:text-rose-500 px-2 py-1">Colaboraciones</a>
+        <a href="#gallery" class="hover:text-rose-500 px-2 py-1">Galería</a>
+        <a href="#contact" class="hover:text-rose-500 px-2 py-1">Contacto</a>
+        <a href="#booking" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-2xl bg-rose-400 hover:bg-rose-500 text-white shadow">Contacto</a>
       </div>
     </nav>
   </header>
@@ -58,8 +45,8 @@
           Bienvenida a <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-300 to-pink-400">Just Barby</span>
         </h1>
         <p class="text-base md:text-lg text-rose-700/80 max-w-prose">
-          Espacio personal y femenino en tonos rosados muy claritos, beige y blancos. Soy Barby, mujer trans. Este sitio es para conocerme y contactarme con respeto.
-          <strong class="block mt-1 text-rose-600/80">No es para prostitución.</strong>
+          Espacio personal y femenino en tonos suaves. Un lugar para conocerme y estar en contacto.
+          <span class="block text-xs text-rose-600/80 mt-2">Página personal — no ofrezco servicios sexuales.</span>
         </p>
         <div class="flex flex-wrap gap-3">
           <a class="rounded-2xl bg-rose-400 hover:bg-rose-500 text-white px-4 py-2 inline-flex items-center shadow" href="#booking">
@@ -67,6 +54,9 @@
           </a>
           <a class="rounded-2xl border border-rose-300 text-rose-700 hover:bg-rose-50 px-4 py-2 inline-flex items-center" href="#gallery">
             <i data-lucide="play-circle" class="w-4 h-4 mr-2"></i>Ver Galería
+          </a>
+          <a class="rounded-2xl bg-green-500 hover:bg-green-600 text-white px-4 py-2 inline-flex items-center shadow" href="https://wa.me/5491124745039?text=Hola%20Just%20Barby%2C%20te%20escribo%20desde%20tu%20sitio%20web%20%3A%29" target="_blank" rel="noopener">
+            <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp
           </a>
         </div>
         <div class="flex items-center gap-4 text-sm text-rose-600/80">
@@ -79,11 +69,12 @@
       </div>
       <div class="relative">
         <div class="aspect-[4/5] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-rose-200">
-          <div class="h-full w-full bg-gradient-to-br from-rose-100 via-white to-pink-100 grid place-items-center">
+          <div class="relative h-full w-full bg-gradient-to-br from-rose-100 via-white to-pink-100 grid place-items-center">
+            <img src="cover.jpg" alt="Portada Just Barby" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'">
             <div class="text-center px-6">
               <p class="text-xs tracking-widest uppercase text-rose-400">Imagen destacada</p>
               <h3 class="text-2xl md:text-3xl font-bold text-rose-800">Sube tu foto en lencería</h3>
-              <p class="text-sm md:text-base text-rose-600 mt-2">Ideal 4:5 (p.ej. 1600×2000), tonos rosa/beige/blanco, estética suave.</p>
+              <p class="text-sm md:text-base text-rose-600 mt-2">Ideal 4:5 (1600×2000), tonos rosa/beige/blanco, estética suave.</p>
             </div>
           </div>
         </div>
@@ -114,31 +105,6 @@
         <div class="rounded-2xl border border-rose-100 bg-white/70 card p-6">
           <h3 class="font-bold text-lg text-rose-700">Conexión auténtica</h3>
           <p class="text-sm text-rose-600/80">Este sitio es mi presentación personal para conectar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="py-16 md:py-24">
-    <div class="max-w-6xl mx-auto px-4 md:px-6">
-      <div class="max-w-3xl mx-auto text-center space-y-3">
-        <p class="uppercase tracking-widest text-xs md:text-sm text-rose-400/80">colaboraciones</p>
-        <h2 class="text-3xl md:text-5xl font-extrabold leading-tight text-rose-900">¿Creamos algo juntas/os?</h2>
-        <p class="text-rose-700/80 text-base md:text-lg">Abierta a colaboraciones y contenido personal. No se ofrecen servicios sexuales.</p>
-      </div>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-rose-100 bg-white/70 card p-6">
-          <h3 class="font-extrabold text-xl">Lookbook</h3>
-          <p class="text-sm text-rose-600/80">Lencería en tonos suaves, femenino y minimalista.</p>
-        </div>
-        <div class="rounded-2xl border border-rose-100 bg-white/70 card p-6">
-          <h3 class="font-extrabold text-xl">Retratos</h3>
-          <p class="text-sm text-rose-600/80">Maquillaje natural, luz suave, estilo elegante.</p>
-        </div>
-        <div class="rounded-2xl border border-rose-100 bg-white/70 card p-6">
-          <h3 class="font-extrabold text-xl">Social Media</h3>
-          <p class="text-sm text-rose-600/80">Reels & fotos para IG/TikTok con estética blush & beige.</p>
         </div>
       </div>
     </div>
@@ -188,23 +154,26 @@
       <div class="max-w-3xl mx-auto text-center space-y-3">
         <p class="uppercase tracking-widest text-xs md:text-sm text-rose-400/80">contacto</p>
         <h2 class="text-3xl md:text-5xl font-extrabold leading-tight text-rose-900">¿Querés conocerme más?</h2>
-        <p class="text-rose-700/80 text-base md:text-lg">Escribime y charlamos. Esto es solo mi página personal.</p>
+        <p class="text-rose-700/80 text-base md:text-lg">Escribime y charlamos. Esto es solo mi página personal. <span class="text-rose-600/80">No ofrezco servicios sexuales.</span></p>
       </div>
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         <div class="rounded-2xl border border-rose-100 bg-white/70 card p-6">
           <h4 class="font-semibold text-rose-700">Contacto directo</h4>
-          <a class="flex items-center gap-2 text-sm hover:text-rose-500" href="tel:+5491112345678">
-            <i data-lucide="phone" class="w-4 h-4"></i> +54 9 11 1234‑5678
+          <a class="flex items-center gap-2 text-sm hover:text-rose-500" href="tel:+5491124745039">
+            <i data-lucide="phone" class="w-4 h-4"></i> +54 9 11 2474‑5039
           </a>
-          <a class="flex items-center gap-2 text-sm hover:text-rose-500" href="mailto:hola@justbarby.com">
-            <i data-lucide="mail" class="w-4 h-4"></i> hola@justbarby.com
+          <a class="flex items-center gap-2 text-sm hover:text-rose-500" href="mailto:Justbarby@proton.me">
+            <i data-lucide="mail" class="w-4 h-4"></i> Justbarby@proton.me
+          </a>
+          <a class="flex items-center gap-2 text-sm hover:text-rose-50 text-white bg-green-500 px-3 py-2 rounded-xl inline-flex" href="https://wa.me/5491124745039?text=Hola%20Just%20Barby%2C%20te%20escribo%20desde%20tu%20sitio%20web%20%3A%29" target="_blank" rel="noopener">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
           </a>
           <p class="flex items-center gap-2 text-sm text-rose-600/80">
             <i data-lucide="map-pin" class="w-4 h-4"></i> Buenos Aires, AR
           </p>
         </div>
         <div class="rounded-2xl md:col-span-2 border border-rose-100 bg-white/70 card p-6">
-          <form action="mailto:hola@justbarby.com" method="GET" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form action="mailto:Justbarby@proton.me" method="GET" class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input name="subject" class="border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="Asunto" />
             <input name="cc" class="border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="Tu email (opcional)" />
             <textarea name="body" class="border rounded-xl p-3 h-32 md:col-span-2 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="Mensaje"></textarea>
@@ -212,7 +181,7 @@
               <button class="w-full rounded-2xl bg-rose-400 hover:bg-rose-500 text-white px-4 py-2">Enviar mensaje</button>
             </div>
           </form>
-          <p class="text-xs text-rose-500/80 mt-3">También podés escribirme por Instagram.</p>
+          <p class="text-xs text-rose-500/80 mt-3">También podés escribirme por Instagram o WhatsApp.</p>
         </div>
       </div>
     </div>
@@ -229,9 +198,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    lucide.createIcons();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();lucide.createIcons();</script>
 </body>
 </html>
