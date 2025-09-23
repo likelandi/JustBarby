@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Just Barby — Preview</title>
+  <meta name="description" content="Just Barby — Página personal. A veces me expreso en femenino por diversión. Busco conocer hombres respetuosos en Buenos Aires. No ofrezco servicios sexuales.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .gradient-bg { background-image: linear-gradient(to bottom, #fff1f2, #ffffff, #faf7f2); }
+  </style>
+</head>
+<body class="min-h-screen gradient-bg text-rose-900">
+  <header class="sticky top-0 z-40 bg-white/70 border-b border-rose-100 backdrop-blur">
+    <nav class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-2xl bg-gradient-to-br from-rose-300 to-pink-400 grid place-items-center shadow-md">
+          <i data-lucide="sparkles" class="w-4 h-4 text-white"></i>
+        </div>
+        <span class="font-black tracking-tight text-lg text-rose-700">Just Barby — Preview</span>
+      </a>
+      <div class="hidden md:flex items-center gap-3 text-sm">
+        <a href="#about" class="hover:text-rose-500 px-2 py-1">Sobre</a>
+        <a href="#connection" class="hover:text-rose-500 px-2 py-1">Conexión</a>
+        <a href="#gallery" class="hover:text-rose-500 px-2 py-1">Galería</a>
+        <a href="#contact" class="hover:text-rose-500 px-2 py-1">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-20">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-rose-900">
+      Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-300 to-pink-400">Just Barby</span>
+    </h1>
+    <p class="mt-4 text-base md:text-lg text-rose-700/90 max-w-prose">
+      Busco conocer <strong>hombres respetuosos</strong> para charlar y compartir momentos.
+      A veces me gusta expresarme en femenino <strong>por diversión</strong> y jugar con esta estética suave.
+      <span class="block text-xs text-rose-600/80 mt-2">Página personal — <strong>no ofrezco servicios sexuales</strong>.</span>
+    </p>
+    <div class="flex flex-wrap gap-2 text-xs text-rose-700/90 mt-4">
+      <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Charlas auténticas</span>
+      <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Citas tranquilas</span>
+      <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Respeto</span>
+      <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Buenos Aires</span>
+    </div>
+    <div class="flex flex-wrap gap-2 text-xs text-rose-500/80 mt-1">
+      <span class="px-3 py-1 rounded-full bg-white border border-rose-100">No sexo por pago</span>
+      <span class="px-3 py-1 rounded-full bg-white border border-rose-100">Sin contenido explícito</span>
+      <span class="px-3 py-1 rounded-full bg-white border border-rose-100">Sin urgencias</span>
+    </div>
+    <div class="mt-4 flex flex-wrap gap-3">
+      <a class="rounded-2xl bg-green-500 hover:bg-green-600 text-white px-4 py-2 inline-flex items-center shadow"
+         href="https://wa.me/5491124745039?text=Hola%20Just%20Barby%2C%20te%20escribo%20desde%20tu%20sitio%20web%20%3A)" target="_blank" rel="noopener">
+        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>WhatsApp
+      </a>
+      <a class="rounded-2xl border border-rose-300 text-rose-700 hover:bg-rose-50 px-4 py-2 inline-flex items-center" href="mailto:Justbarby@proton.me">
+        <i data-lucide="mail" class="w-4 h-4 mr-2"></i>Email
+      </a>
+      <a class="rounded-2xl border border-rose-300 text-rose-700 hover:bg-rose-50 px-4 py-2 inline-flex items-center" href="https://instagram.com/justbarby" target="_blank">
+        <i data-lucide="instagram" class="w-4 h-4 mr-2"></i>Instagram
+      </a>
+    </div>
+  </section>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
