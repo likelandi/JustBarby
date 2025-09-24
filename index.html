@@ -254,5 +254,26 @@
       }
     })();
   </script>
+  <script>
+(async () => {
+  const NAMESPACE = 'likelandi-JustBarby'; // nombre del contador (puedo cambiártelo)
+  const KEY = 'site';                      // clave (puedo separarlo por páginas si querés)
+  const base = 'https://api.countapi.xyz';
+  const seenKey = 'jb_visit_seen';
+  const el = document.getElementById('visit-count');
+  const fmt = n => new Intl.NumberFormat('es-AR').format(n);
+  try {
+    const first = !localStorage.getItem(seenKey);
+    const endpoint = first ? `${base}/hit/${NAMESPACE}/${KEY}` : `${base}/get/${NAMESPACE}/${KEY}`;
+    const r = await fetch(endpoint);
+    const data = await r.json();
+    if (data && typeof data.value === 'number') el.textContent = fmt(data.value);
+    if (first) localStorage.setItem(seenKey, '1');
+  } catch {
+    el.textContent = '—';
+  }
+})();
+</script>
+
 </body>
 </html>
