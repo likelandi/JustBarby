@@ -35,7 +35,6 @@
     </nav>
   </header>
 
-  <!-- HERO -->
   <section id="home" class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10 opacity-70">
       <div class="absolute -top-24 -left-24 h-80 w-80 bg-rose-100 rounded-full blur-3xl"></div>
@@ -52,7 +51,6 @@
           <span class="block text-xs text-rose-600/80 mt-2">Página personal — <strong>no ofrezco servicios sexuales</strong> ni contenido explícito.</span>
         </p>
 
-        <!-- Chips -->
         <div class="flex flex-wrap gap-2 text-xs text-rose-700/90 mt-2">
           <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Conexión íntima</span>
           <span class="px-3 py-1 rounded-full bg-rose-50 border border-rose-100">Respeto mutuo</span>
@@ -81,7 +79,6 @@
         </div>
       </div>
 
-      <!-- Hero image (auto si existe cover.jpg) -->
       <div class="relative">
         <div class="aspect-[4/5] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-rose-200">
           <div class="relative h-full w-full bg-gradient-to-br from-rose-100 via-white to-pink-100 grid place-items-center">
@@ -100,7 +97,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 md:px-6">
       <div class="max-w-3xl mx-auto text-center space-y-3">
@@ -125,7 +121,6 @@
     </div>
   </section>
 
-  <!-- CONNECTION -->
   <section id="connection" class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 md:px-6">
       <div class="max-w-3xl mx-auto text-center space-y-3">
@@ -150,7 +145,6 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
   <section id="gallery" class="py-16 md:py-24 bg-rose-50/60">
     <div class="max-w-6xl mx-auto px-4 md:px-6">
       <div class="max-w-3xl mx-auto text-center space-y-3">
@@ -183,7 +177,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="booking" class="py-16 md:py-24">
     <div class="max-w-5xl mx-auto px-4 md:px-6">
       <div class="max-w-3xl mx-auto text-center space-y-3">
@@ -229,12 +222,37 @@
         <a href="#" class="hover:text-rose-500">Política de privacidad</a>
         <a href="#" class="hover:text-rose-500">Términos</a>
       </div>
+      <!-- VISITOR COUNTER -->
+      <div class="flex items-center gap-2 text-sm">
+        <i data-lucide="activity" class="w-4 h-4"></i>
+        <span>Visitas: <strong id="visit-count">—</strong></span>
+      </div>
     </div>
   </footer>
 
   <script>
+    // Año en footer + iconos
     document.getElementById('year').textContent = new Date().getFullYear();
     lucide.createIcons();
+    // --- Contador de visitas (CountAPI) ---
+    (async () => {
+      const NAMESPACE = 'likelandi-JustBarby';
+      const KEY = 'site';
+      const base = 'https://api.countapi.xyz';
+      const seenKey = 'jb_visit_seen';
+      const el = document.getElementById('visit-count');
+      const fmt = n => new Intl.NumberFormat('es-AR').format(n);
+      try {
+        const first = !localStorage.getItem(seenKey);
+        const endpoint = first ? `${base}/hit/${NAMESPACE}/${KEY}` : `${base}/get/${NAMESPACE}/${KEY}`;
+        const r = await fetch(endpoint);
+        const data = await r.json();
+        if (data && typeof data.value === 'number') el.textContent = fmt(data.value);
+        if (first) localStorage.setItem(seenKey, '1');
+      } catch (err) {
+        el.textContent = '—';
+      }
+    })();
   </script>
 </body>
 </html>
